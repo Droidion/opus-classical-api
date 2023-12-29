@@ -13,7 +13,7 @@
     "@elysiajs/swagger": "^0.8.0",
     "@libsql/client": "0.4.0-pre.5",
     "drizzle-orm": "^0.29.2",
-    "elysia": "^0.8.5",
+    "elysia": "^0.8.6",
     "fast-sort": "^3.4.0",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
