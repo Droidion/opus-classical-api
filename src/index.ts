@@ -17,7 +17,9 @@ const app = new Elysia()
   )
   .use(
     swagger({
+      provider: 'swagger-ui',
       documentation: {
+        openapi: '3.1.0',
         info: {
           title: 'Opus Classical API',
           version: '1.0.0',
