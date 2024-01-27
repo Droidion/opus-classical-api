@@ -1,11 +1,11 @@
 import { relations } from 'drizzle-orm'
-import { composers } from './composers'
 import {
-  sqliteTable,
   integer,
+  sqliteTable,
   text,
   uniqueIndex,
 } from 'drizzle-orm/sqlite-core'
+import { composers } from './composers'
 
 export const periods = sqliteTable(
   'periods',

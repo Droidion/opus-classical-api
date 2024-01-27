@@ -10,9 +10,9 @@ export function filterUniqueBy<T, K extends keyof T>(
           ? el[prop] === curr[prop] && el[prop2] === curr[prop2]
           : el[prop] === curr[prop],
       )
-    ) {
+    )
       acc.push(curr)
-    }
+
     return acc
   }, [])
 }

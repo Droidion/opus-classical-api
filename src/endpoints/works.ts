@@ -15,9 +15,9 @@ export const works = new Elysia({ prefix: '/works' })
     '/:workId',
     async ({ params: { workId } }) => {
       const work = await getWorkMetadata(dbConnect(), workId)
-      if (work === undefined) {
+      if (work === undefined)
         throw new NotFoundError()
-      }
+
       return work
     },
     {

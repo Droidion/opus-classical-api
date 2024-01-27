@@ -1,7 +1,7 @@
 import { eq, sql } from 'drizzle-orm'
+import { type Static, t } from 'elysia'
 import type { DrizzleDb } from '../connect'
 import { composers, composersCountries, countries, periods } from '../schema'
-import { t, type Static } from 'elysia'
 
 export const Composer = t.Object({
   firstName: t.String(),

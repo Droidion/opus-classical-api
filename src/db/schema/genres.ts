@@ -1,11 +1,11 @@
 import { relations } from 'drizzle-orm'
-import { works } from './works'
 import {
-  sqliteTable,
   integer,
+  sqliteTable,
   text,
   uniqueIndex,
 } from 'drizzle-orm/sqlite-core'
+import { works } from './works'
 
 export const genres = sqliteTable(
   'genres',

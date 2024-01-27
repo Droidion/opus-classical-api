@@ -1,11 +1,11 @@
 import { Elysia } from 'elysia'
 import { swagger } from '@elysiajs/swagger'
 import { cors } from '@elysiajs/cors'
+import { jwt } from '@elysiajs/jwt'
 import composers from './endpoints/composers'
 import { composer } from './endpoints/composer'
 import { admin } from './endpoints/admin'
 import { works } from './endpoints/works'
-import { jwt } from '@elysiajs/jwt'
 
 const app = new Elysia()
   .use(cors())
@@ -36,7 +36,6 @@ const app = new Elysia()
           set.status = 401
           return 'Unauthorized'
         }
-        return
       },
     },
     app => app.group('/admin', app => app.use(admin)),

@@ -1,9 +1,9 @@
 import { and, eq, isNull } from 'drizzle-orm'
+import { type Static, t } from 'elysia'
 import type { DrizzleDb } from '../connect'
 import { catalogues } from '../schema'
 import { genres } from '../schema/genres'
 import { works } from '../schema/works'
-import { t, type Static } from 'elysia'
 
 export const Work = t.Object({
   id: t.Number(),
@@ -60,7 +60,8 @@ export async function getWorksByGenres(
     const target = result.find(group => group.genreId === obj.genreId)
     if (target) {
       target.works.push(obj)
-    } else {
+    }
+    else {
       result.push({
         genreName: obj.genreName,
         genreId: obj.genreId,

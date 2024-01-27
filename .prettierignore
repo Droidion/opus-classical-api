@@ -1,7 +1,0 @@
-node_modules
-*.log*
-.cache
-.output
-.env
-.vscode
-dist

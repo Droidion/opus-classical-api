@@ -1,9 +1,9 @@
 import { eq } from 'drizzle-orm'
+import { type Static, t } from 'elysia'
 import type { DrizzleDb } from '../connect'
 import { catalogues } from '../schema/catalogues'
 import { composers } from '../schema/composers'
 import { works } from '../schema/works'
-import { t, type Static } from 'elysia'
 
 export const WorkMetadata = t.Object({
   title: t.String(),

@@ -1,5 +1,6 @@
 import { and, eq, sql } from 'drizzle-orm'
 import { sort } from 'fast-sort'
+import { type Static, t } from 'elysia'
 import type { DrizzleDb } from '../connect'
 import { filterUniqueBy } from '../../helpers/filterByUniqueId'
 import {
@@ -11,7 +12,6 @@ import {
   streamers,
 } from '../schema'
 import { labels } from '../schema/labels'
-import { t, type Static } from 'elysia'
 
 export const Performer = t.Object({
   firstName: t.Nullable(t.String()),

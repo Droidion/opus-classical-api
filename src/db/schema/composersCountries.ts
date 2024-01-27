@@ -1,12 +1,12 @@
 import { relations } from 'drizzle-orm'
-import { composers } from './composers'
-import { countries } from './countries'
 import {
-  sqliteTable,
+  index,
   integer,
   primaryKey,
-  index,
+  sqliteTable,
 } from 'drizzle-orm/sqlite-core'
+import { composers } from './composers'
+import { countries } from './countries'
 
 export const composersCountries = sqliteTable(
   'composers_countries',

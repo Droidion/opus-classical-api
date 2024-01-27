@@ -1,16 +1,15 @@
 import { relations } from 'drizzle-orm'
+import {
+  type AnySQLiteColumn,
+  index,
+  integer,
+  sqliteTable,
+  text,
+  uniqueIndex,
+} from 'drizzle-orm/sqlite-core'
 import { catalogues } from './catalogues'
 import { composers } from './composers'
 import { genres } from './genres'
-
-import {
-  sqliteTable,
-  integer,
-  text,
-  uniqueIndex,
-  index,
-  type AnySQLiteColumn,
-} from 'drizzle-orm/sqlite-core'
 
 export const works = sqliteTable(
   'works',
@@ -38,7 +37,7 @@ export const works = sqliteTable(
       .notNull()
       .references(() => genres.id),
   },
-  table => {
+  (table) => {
     return {
       idIdx: uniqueIndex('works_id_idx').on(table.id),
       catalogueIdIdx: index('works_catalogue_id').on(table.catalogueId),

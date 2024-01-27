@@ -12,9 +12,9 @@ export const composer = new Elysia({ prefix: '/composer' })
     '/slug/:slug',
     async ({ params: { slug } }) => {
       const composer = await getComposerBySlug(dbConnect(), slug)
-      if (composer === null) {
+      if (composer === null)
         throw new NotFoundError()
-      }
+
       return composer
     },
     {

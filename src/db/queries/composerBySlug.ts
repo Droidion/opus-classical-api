@@ -1,8 +1,8 @@
 import { eq } from 'drizzle-orm'
+import { type Static, t } from 'elysia'
 import type { DrizzleDb } from '../connect'
 import { composers } from '../schema/composers'
 import { getCountriesByComposer } from './countriesByComposer'
-import { t, type Static } from 'elysia'
 
 export const ComposerBySlug = t.Object({
   id: t.Number(),

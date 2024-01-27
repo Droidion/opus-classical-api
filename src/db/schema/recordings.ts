@@ -1,15 +1,15 @@
 import { relations } from 'drizzle-orm'
+import {
+  index,
+  integer,
+  sqliteTable,
+  text,
+  uniqueIndex,
+} from 'drizzle-orm/sqlite-core'
 import { labels } from './labels'
 import { performersRecordingsInstruments } from './performersRecordingsInstruments'
 import { recordingsStreamers } from './recordingsStreamers'
 import { works } from './works'
-import {
-  sqliteTable,
-  integer,
-  text,
-  uniqueIndex,
-  index,
-} from 'drizzle-orm/sqlite-core'
 
 export const recordings = sqliteTable(
   'recordings',
