@@ -1,29 +1,31 @@
 {
   "name": "@opusclassical/api",
-  "version": "1.0.50",
   "type": "module",
+  "version": "1.0.50",
+  "module": "src/index.ts",
   "scripts": {
     "dev": "bun --watch src/index.ts",
     "start": "NODE_ENV=production bun src/index.ts",
-    "lint:eslint": "eslint src/**/*.ts",
+    "lint:eslint": "eslint .",
     "lint:ts": "tsc --noEmit",
-    "test": "bun test"
+    "test": "bun test",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.8.0",
     "@elysiajs/jwt": "^0.8.0",
     "@elysiajs/swagger": "^0.8.5",
     "@libsql/client": "0.4.0",
-    "bun-types": "^1.0.25",
     "drizzle-orm": "^0.29.3",
     "elysia": "^0.8.14",
+    "fast-sort": "^3.4.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.3",
+    "bun-types": "^1.0.25",
     "eslint": "^8.56.0",
-    "fast-sort": "^3.4.0",
+    "husky": "^9.0.6",
     "typescript": "^5.3.3",
     "vitest": "1.2.2"
-  },
-  "module": "src/index.ts",
-  "devDependencies": {
-    "@antfu/eslint-config": "^2.6.3"
   }
 }

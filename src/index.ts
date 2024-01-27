@@ -36,6 +36,7 @@ const app = new Elysia()
           set.status = 401
           return 'Unauthorized'
         }
+        return set
       },
     },
     app => app.group('/admin', app => app.use(admin)),
