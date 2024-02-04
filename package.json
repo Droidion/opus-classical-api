@@ -14,13 +14,13 @@
     "@elysiajs/cors": "^0.8.0",
     "@elysiajs/jwt": "^0.8.0",
     "@elysiajs/swagger": "^0.8.5",
-    "@libsql/client": "0.4.2",
+    "@libsql/client": "0.4.3",
     "drizzle-orm": "^0.29.3",
     "elysia": "^0.8.15",
     "fast-sort": "^3.4.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.3",
+    "@antfu/eslint-config": "^2.6.4",
     "bun-types": "^1.0.25",
     "eslint": "^8.56.0",
     "typescript": "^5.3.3",
